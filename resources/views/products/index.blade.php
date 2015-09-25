@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container">     
-        <h1>Categories</h1>
+        <h1>Produtos</h1>
         <a href="{{ route('products.create') }}" class="btn btn-default">New Product</a>
         <br><br>
         <table class="table">
@@ -10,15 +10,17 @@
                 <th>ID</th>
                 <th>Name</th>
                 <th>Description</th>
+                <th>Price</th>
                 <th>Action</th>
             </tr>
             @foreach($products as $product)
             <tr>
-                <td>{{$products->id}}</td>
-                <td>{{$products->name}}</td>
-                <td>{{$products->description}}</td>
-                <td><a href="{{ route('products.edit',['id'=>$products->id]) }}">Edit</a> |               
-                    <a href="{{ route('products.destroy',['id'=>$products->id]) }}">Delete</a>
+                <td>{{$product->id}}</td>
+                <td>{{$product->name}}</td>
+                <td>{{$product->description}}</td>
+                <td>{{$product->price}}</td>
+                <td><a href="{{ route('products.edit',['id'=>$product->id]) }}">Edit</a> |               
+                    <a href="{{ route('products.destroy',['id'=>$product->id]) }}">Delete</a>
                 </td>
             </tr>
             @endforeach

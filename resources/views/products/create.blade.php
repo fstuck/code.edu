@@ -24,16 +24,6 @@
             {!! Form::label('price','Price:') !!}
             {!! Form::text('price',null,['class'=>'form-control']) !!}
         </div>
-        <div class="checkbox">
-            <label>
-                {!! Form::checkbox('featured',null) !!} Featured
-            </label>
-        </div>
-        <div class="checkbox">
-            <label>
-                {!! Form::checkbox('recomended',null) !!} Recomended
-            </label>
-        </div>
         <div class="form-group">
             {!! Form::submit('Add Product',['class'=>'btn btn-primary form-control']) !!}
         </div> 
