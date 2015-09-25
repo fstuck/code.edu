@@ -140,10 +140,15 @@ return [
         /*
          * Application Service Providers...
          */
-        App\Providers\AppServiceProvider::class,
-        App\Providers\AuthServiceProvider::class,
-        App\Providers\EventServiceProvider::class,
-        App\Providers\RouteServiceProvider::class,
+        CodeCommerce\Providers\AppServiceProvider::class,
+        CodeCommerce\Providers\AuthServiceProvider::class,
+        CodeCommerce\Providers\EventServiceProvider::class,
+        CodeCommerce\Providers\RouteServiceProvider::class,
+        
+        /*
+         * Inseridos pelo desenvolvedor...
+         */
+        \Illuminate\Html\HtmlServiceProvider::class
 
     ],
 
@@ -193,7 +198,11 @@ return [
         'URL'       => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View'      => Illuminate\Support\Facades\View::class,
-
+        /*
+         * Inseridos pelo desenvolvedor...
+         */
+        'Form'      => \Illuminate\Html\FormFacade::class,
+        'Html'      => \Illuminate\Html\HtmlFacade::class,
     ],
 
 ];
