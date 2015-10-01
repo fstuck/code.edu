@@ -35,7 +35,7 @@ class CategoriesController extends Controller
         $input = $request->all();
         $category = $this->categoryModel->fill($input);
         $category->save();
-        return redirect('categories');
+        return redirect('admin/categories');
     }
     public function edit($id)
     {
@@ -46,11 +46,11 @@ class CategoriesController extends Controller
     public function update(Requests\CategoryRequest $request, $id)          
     {
         $this->categoryModel->find($id)->update($request->all());
-        return redirect('categories');
+        return redirect('admin/categories');
     }
     public function destroy($id)
     {
         $this->categoryModel->find($id)->delete();
-        return redirect('categories');
+        return redirect('admin/categories');
     }
 }
