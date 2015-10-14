@@ -4,7 +4,7 @@ namespace CodeCommerce\Http\Requests;
 
 use CodeCommerce\Http\Requests\Request;
 
-class ProductRequest extends Request
+class ProductImageRequest extends Request
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -23,12 +23,8 @@ class ProductRequest extends Request
      */
     public function rules()
     {
-        $this->merge(['featured' => $this->input('featured',0)]);
-        $this->merge(['recommended' => $this->input('recommended',0)]);
         return [
-            'name' => 'required|min:5',
-            'description' => 'required',
-            'price' => 'required'
+            'image' => 'image'
         ];
     }
 }

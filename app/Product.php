@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class product extends Model
 {
-    protected $fillable = ['category_id','name','description','price'];
+    protected $fillable = ['category_id','name','description','price','featured','recommended'];
     
     public function images(){
         return $this->hasMany('CodeCommerce\ProductImage');

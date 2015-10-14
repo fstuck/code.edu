@@ -31,6 +31,14 @@
             {!! Form::text('price',$product->price,['class'=>'form-control']) !!}
         </div>
         <div class="form-group">
+            {!! Form::label('featured','Featured: ') !!}
+            {!! Form::checkbox('featured', 1, $product->featured) !!}
+        </div>
+        <div class="form-group">
+            {!! Form::label('recommended','Recommended: ') !!}
+            {!! Form::checkbox('recommended', 1, $product->recommended) !!}
+        </div>
+        <div class="form-group">
             {!! Form::submit('Save Product',['class'=>'btn btn-primary']) !!}
         </div> 
         {!! Form::close() !!}

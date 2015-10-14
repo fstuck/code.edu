@@ -12,6 +12,6 @@ class ProductImage extends Model
     ];
 
     public function product(){
-        return $this->belongsTo('Code\Commerce\Product');
+        return $this->belongsTo('CodeCommerce\Product');
     }
 }
