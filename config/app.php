@@ -148,7 +148,8 @@ return [
         /*
          * Inseridos pelo desenvolvedor...
          */
-        \Illuminate\Html\HtmlServiceProvider::class
+        \Illuminate\Html\HtmlServiceProvider::class,
+        KennedyTedesco\Validation\ValidationServiceProvider::class
 
     ],
 
