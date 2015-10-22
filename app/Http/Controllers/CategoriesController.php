@@ -21,7 +21,8 @@ class CategoriesController extends Controller
 
     public function index()
     {
-        $categories = $this->categoryModel->all();
+        $categories = $this->categoryModel->paginate(10);
+        $categories->setPath('/laravel_commerce/public/admin/categories');//resolver problema de document root
         return view('categories.index',  compact('categories'));
     }
     
